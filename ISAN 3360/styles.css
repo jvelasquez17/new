@@ -1,0 +1,16 @@
+:root {
+    --brand: #8000000
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    line-height: 1.6;
+}
+
+/* 2. Make widths behave (you always want this one exactly as is) */
+* { box-sizing: border-box; }
+
+/* 3. Give your content breathing room */
+main { padding: 16px; border: 2px solid gray; margin: 24px; }
+
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Checklist 3: the viewport meta tag. Every page needs it. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jesse Velasquez</title>
+  <!-- This line connects this page to styles.css -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Checklist 1: the nav bar. The same nav sits on every page. -->
+  <header>
+    <nav class="container">
+      <a href="index.html">Home</a>
+      <a href="project.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Checklist 6: class="container" keeps the page centered -->
+  <main class="container">
+    <h1>Jesse Velasquez</h1>
+    <p id="intro">Business student at Texas State. I build websites, one page at a time.</p>
+
+    <!-- Put your own photo in the images folder, then change src and alt -->
+    <figure>
+      <img src="images/Headshot.JPG" alt="A photo of Jesse Velasquez" width="300">
+      <figcaption>Jesse Velasquez (Photo: TXST, public domain)</figcaption>
+    </figure>
+
+    <h2>Three things about me</h2>
+    <!-- Checklist 2: three cards. On wider screens they sit in one row. -->
+    <section class="cards">
+      <div class="card">
+        <h3>My major</h3>
+        <p>Computer Information Systems, because I like to build things that people use.</p>
+      </div>
+      <div class="card">
+        <h3>Hobbies</h3>
+        <p>Hiking, Playing guitar, and videography are some of my hobbies.</p>
+      </div>
+      <div class="card">
+        <h3>My goal</h3>
+        <p>Work as a data analyst for a NBA team.</p>
+      </div>
+    </section>
+
+    <h2>My skills</h2>
+    <table>
+      <tr><th>Skill</th><th>Level</th></tr>
+      <tr><td>HTML</td><td>Comfortable</td></tr>
+      <tr><td>CSS</td><td>Getting better every week</td></tr>
+      <tr><td>Flexbox and Grid</td><td>Brand new</td></tr>
+    </table>
+
+    <h2>Links I like</h2>
+    <ul>
+      <li><a href="https://www.txst.edu" target="_blank" rel="noopener">Texas State University</a></li>
+      <li><a href="https://developer.mozilla.org" target="_blank" rel="noopener">MDN Web Docs</a></li>
+    </ul>
+  </main>
+
+  <footer class="container">
+    <p>&copy; 2026 Jesse Velasquez</p>
+  </footer>
+</body>
+</html>

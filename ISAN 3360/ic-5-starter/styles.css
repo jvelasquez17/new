@@ -1,0 +1,43 @@
+/* In-class Exercise #5 starter: line things up with Flexbox.
+   Type each step into its slot below. Save after every step. */
+
+/* From Monday: your variables. Leave these lines as they are. */
+:root {
+  --brand: #800000;
+  --space: 1rem;
+}
+
+/* From Monday: each card gets a frame. Leave this rule as it is. */
+.card {
+  border: 2px solid var(--brand);
+  padding: var(--space);
+}
+
+/* Step 3: center the embedded form */
+.contact-form {
+  display: flex;
+  
+  margin-top: var(--space);
+}
+
+/* Step 1: the nav bar */
+nav {
+display: flex; 
+justify-content: space-between;
+align-items: center;
+}
+
+/* Step 2: the card row */
+.cards {
+  display: flex;
+  gap: var(--space);
+}
+
+/* Step 3: your layout plan (a comment) */
+/* Plan: container = cards, direction = row, spacing = var(--space) */
+
+.contact-form {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space);
+}

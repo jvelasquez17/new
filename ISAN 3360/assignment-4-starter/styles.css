@@ -1,0 +1,95 @@
+/* ================================================================
+   styles.css: one stylesheet for all three pages.
+   Flexbox or Grid? Flexbox lines items up in ONE direction, like
+   books on a shelf: the nav and the three cards. Grid places items
+   in rows AND columns at once, like a chessboard: the projects.
+   Mobile-first: the rules at the top are the phone layout.
+   The @media block at the bottom adds columns on wider screens.
+   Each "Checklist" comment matches a row of the A4 checklist.
+   Checklist 7: check it in the DevTools device toolbar, at 375px
+   (one column, no sideways scrolling) and at 1280px (columns).
+   ================================================================ */
+
+/* Make widths behave. Leave this line as it is. */
+* { box-sizing: border-box; }
+
+/* Your variables: change a color here, and the whole site follows */
+:root {
+  --brand: #226b02;
+  --light: #f5f1ee;
+  --text: #222222;
+  --space: 1rem;
+}
+
+/* The voice: typography for the whole site */
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+h1, h2, h3, a { color: var(--brand); }
+
+/* The intro line (an id selector) */
+#intro { font-size: 1.25rem; }
+
+/* Photos and the form never get wider than the screen */
+img, iframe { max-width: 100%; }
+
+/* Checklist 6: a centered container (max-width + margin: 0 auto) */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: var(--space);
+}
+
+/* Checklist 1: the nav bar (Flexbox) */
+header { background: var(--brand); }
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space);
+}
+nav a { color: white; }
+
+/* Each card gets a frame (a class selector and the box model) */
+.card {
+  background: var(--light);
+  border: 2px solid var(--brand);
+  padding: var(--space);
+}
+
+/* The table: room inside each cell */
+th, td { padding: 0.25rem 1rem; }
+
+/* Center the embedded form (In-class Exercise #5) */
+.contact-form {
+  display: flex;
+  justify-content: center;
+}
+
+/* Checklist 5, part 1 (mobile-first): the phone layout comes first.
+   These rules work on every screen. 1fr makes one column, so the
+   cards and the projects stack. Checklist 4: display: grid. */
+.cards, .gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+/* Checklist 5, part 2: this media query ADDS columns on wider screens.
+   min-width: 600px means "only when the screen is 600px or wider".
+   On a phone, the browser skips this whole block, so one column stays. */
+@media (min-width: 600px) {
+  /* Checklist 2: the three cards sit in one row (Flexbox + gap) */
+  .cards {
+    display: flex;
+    gap: 2rem;
+  }
+  /* Checklist 4: the projects get three columns */
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
